@@ -1,0 +1,13 @@
+body {
+	background-image: url("../img/gray_jean.png");
+}
+
+div #login {
+	margin-top: 70px;
+	margin-left: 0%;
+}
+
+div #info {
+	margin-top: 70px;
+	margin-left: -2px;
+}
