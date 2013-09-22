@@ -75,7 +75,7 @@ function quote_smart($value)
 function GetHTML($regid)
 {
     global $_HTMLSOURCE;
-    $ch = curl_init('http://abiturient.sibsau.ru/rating/rating.php');
+    $ch = curl_init('http://abiturient.sibsau.ru/images/doc/2013/rating/rating.php');
     curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:17.0) Gecko/20100101 Firefox/17.0');
     curl_setopt($ch, CURLOPT_HEADER, 1);
     curl_setopt($ch, CURLOPT_POST, 1);
@@ -152,7 +152,6 @@ function SQLSide($regid, $email)
     $query=$_SQL->select('SELECT * FROM clients WHERE regid="' . quote_smart($regid) . '" AND email="' . quote_smart($email) . '"');
     if (empty($query))
     {
-        echo 'ПИЗДЕЦ НЕ НАЙДЕНО';
         return false;
     }
     else
